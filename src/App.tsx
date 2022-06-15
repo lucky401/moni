@@ -9,6 +9,7 @@ import {
 import {FullPageSpinner} from 'common/components';
 
 const LoginModule = lazy(() => import('./modules/login'));
+const MenuModule = lazy(() => import('./modules/menu'));
 const FullPageError = lazy(() => import('common/components/full-page-error'));
 
 function App(): JSX.Element {
@@ -24,6 +25,7 @@ function App(): JSX.Element {
     <Suspense fallback={<FullPageSpinner />}>
       <Routes>
         <Route path="/login/*" element={<LoginModule />} />
+        <Route path="/menu/*" element={<MenuModule />} />
         <Route
           path="*"
           element={<FullPageError message="Page not found" errorCode={404} />}
