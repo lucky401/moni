@@ -1,5 +1,4 @@
-import { AddIcon, DeleteIcon, EditIcon, SearchIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-
+import { DeleteIcon, EditIcon, SearchIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import {
     Table,
     Thead,
@@ -13,15 +12,14 @@ import {
     HStack,
     Tag,
     Heading,
-    Grid,
-    GridItem,
     InputGroup,
     InputLeftElement,
     Input,
     Button,
     Stack,
-    IconButton,
-  } from '@chakra-ui/react'
+    IconButton, Flex, Spacer
+} from '@chakra-ui/react';
+import ButtonAddData from '../components/modal-add-data';
 
 function Anggota(): JSX.Element {
     return (
@@ -30,21 +28,20 @@ function Anggota(): JSX.Element {
                 <Heading size="lg" fontSize="36px" textAlign="center" my={100}>
                     DAFTAR ANGGOTA
                 </Heading>
-                <Grid templateColumns='repeat(5,1fr)' gap={4}>
-                    <GridItem colSpan={2} h='10'>
+                <Flex>
+                    <Box >
                         <InputGroup >
                             <InputLeftElement pointerEvents='none'>
                                 <SearchIcon color='gray.300' />
                             </InputLeftElement>
                             <Input type='tel' placeholder='Cari nama anggota...' />
                         </InputGroup>
-                    </GridItem>
-                    <GridItem colStart={5} colEnd={6} h='10'>
-                        <Button leftIcon={<AddIcon />} colorScheme='teal' variant='outline' textAlign="right">
-                            Tambah Anggota
-                        </Button>
-                    </GridItem>
-                </Grid>
+                    </Box>
+                    <Spacer />
+                    <Box >
+                        <ButtonAddData />
+                    </Box>
+                </Flex>
                 <TableContainer marginBottom={12}>
                     <Table variant='striped'>
                         <Thead>
@@ -65,17 +62,17 @@ function Anggota(): JSX.Element {
                                 <Td>081284302290</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                        Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                                Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -86,17 +83,17 @@ function Anggota(): JSX.Element {
                                 <Td>081228110374</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='gray'>
-                                        Tidak Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='gray'>
+                                                Tidak Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -107,17 +104,17 @@ function Anggota(): JSX.Element {
                                 <Td>081284302290</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                        Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                                Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -128,17 +125,17 @@ function Anggota(): JSX.Element {
                                 <Td>085399902820</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                        Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                                Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -149,17 +146,17 @@ function Anggota(): JSX.Element {
                                 <Td>081222289120</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='gray'>
-                                        Tidak Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='gray'>
+                                                Tidak Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -170,17 +167,17 @@ function Anggota(): JSX.Element {
                                 <Td>081284302290</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                        Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                                Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
@@ -191,17 +188,17 @@ function Anggota(): JSX.Element {
                                 <Td>085399902820</Td>
                                 <Td>
                                     <HStack spacing={4}>
-                                    {['sm'].map((size) => (
-                                        <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                        Aktif
-                                        </Tag>
-                                    ))}
+                                        {['sm'].map((size) => (
+                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                                Aktif
+                                            </Tag>
+                                        ))}
                                     </HStack>
                                 </Td>
                                 <Td>
                                     <HStack spacing={4}>
                                         <EditIcon />
-                                        <DeleteIcon color="red.500"/>
+                                        <DeleteIcon color="red.500" />
                                     </HStack>
                                 </Td>
                             </Tr>
