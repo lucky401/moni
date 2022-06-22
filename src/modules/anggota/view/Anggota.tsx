@@ -20,6 +20,25 @@ import {
     IconButton, Flex, Spacer
 } from '@chakra-ui/react';
 import ButtonAddData from '../components/modal-add-data';
+import ButtonDelete from '../components/modal-delete';
+
+const dataAnggota = [
+    {
+        id: "1",
+        name: "Melania",
+        address: "Jl. Mangga 2",
+        phoneNumber: "081284302290",
+        status: 0
+    },
+    {
+        id: "2",
+        name: "Budi",
+        address: "Perumahan Bogor Indah No.12",
+        phoneNumber: "08121212121",
+        status: 1
+    },
+
+];
 
 function Anggota(): JSX.Element {
     return (
@@ -55,153 +74,35 @@ function Anggota(): JSX.Element {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>#20462</Td>
-                                <Td>Melania</Td>
-                                <Td>Jl. Mangga 2</Td>
-                                <Td>081284302290</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#45191</Td>
-                                <Td>Lucky</Td>
-                                <Td>Bukit Asri Jl. Melon</Td>
-                                <Td>081228110374</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='gray'>
-                                                Tidak Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#18889</Td>
-                                <Td>Tazrian</Td>
-                                <Td>Bukit Pelangi No.10</Td>
-                                <Td>081284302290</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#11182</Td>
-                                <Td>Gilly</Td>
-                                <Td>Perumahan Bogor Indah No.12</Td>
-                                <Td>085399902820</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#16660</Td>
-                                <Td>Salwa</Td>
-                                <Td>Griya Bukit Jaya No.1</Td>
-                                <Td>081222289120</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='gray'>
-                                                Tidak Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#18889</Td>
-                                <Td>Tazrian</Td>
-                                <Td>Bukit Pelangi No.10</Td>
-                                <Td>081284302290</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>#11182</Td>
-                                <Td>Gilly</Td>
-                                <Td>Perumahan Bogor Indah No.12</Td>
-                                <Td>085399902820</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map((size) => (
-                                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
+                            {dataAnggota.map((item) => (
+                                <Tr>
+                                    <Td>{item.id}</Td>
+                                    <Td>{item.name}</Td>
+                                    <Td>{item.address}</Td>
+                                    <Td>{item.phoneNumber}</Td>
+                                    <Td>
+                                        <HStack spacing={4}>
+                                            {
+                                                item.status === 1 ?
+                                                    <Tag variant='solid' colorScheme='teal'>
+                                                        Aktif
+                                                    </Tag>
+
+                                                    :
+                                                    <Tag variant='solid' colorScheme='gray'>
+                                                        Tidak Aktif
+                                                    </Tag>
+                                            }
+                                        </HStack>
+                                    </Td>
+                                    <Td>
+                                        <HStack spacing={4}>
+                                            <EditIcon />
+                                            <ButtonDelete />
+                                        </HStack>
+                                    </Td>
+                                </Tr>
+                            ))}
                         </Tbody>
                     </Table>
                 </TableContainer>
