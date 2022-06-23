@@ -41,6 +41,7 @@ const dataAnggota = [
 
 ];
 
+
 function Anggota(): JSX.Element {
     return (
         <Container maxW='auto' centerContent>

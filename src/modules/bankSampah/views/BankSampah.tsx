@@ -27,7 +27,6 @@ import {
     ChevronLeftIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
-
 import ButtonAddData from '../components/dialog-add';
 import ButtonDelete from '../../../common/components/dialog-delete';
 
@@ -114,7 +113,6 @@ function BankSampah(): JSX.Element {
                                     </Td>
                                 </Tr>
                             ))}
-
                         </Tbody>
                     </Table>
                 </TableContainer>
