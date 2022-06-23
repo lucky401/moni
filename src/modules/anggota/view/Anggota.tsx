@@ -1,4 +1,4 @@
-import { DeleteIcon, EditIcon, SearchIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { SearchIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import {
     Table,
     Thead,
@@ -21,6 +21,7 @@ import {
 } from '@chakra-ui/react';
 import ButtonAddData from '../components/modal-add-data';
 import ButtonDelete from '../components/modal-delete';
+import ButtonUpdate from '../components/dialog-update';
 
 const dataAnggota = [
     {
@@ -32,7 +33,7 @@ const dataAnggota = [
     },
     {
         id: "2",
-        name: "Budi",
+        name: "Melania",
         address: "Perumahan Bogor Indah No.12",
         phoneNumber: "08121212121",
         status: 1
@@ -96,8 +97,8 @@ function Anggota(): JSX.Element {
                                         </HStack>
                                     </Td>
                                     <Td>
-                                        <HStack spacing={4}>
-                                            <EditIcon />
+                                        <HStack>
+                                            <ButtonUpdate />
                                             <ButtonDelete />
                                         </HStack>
                                     </Td>
