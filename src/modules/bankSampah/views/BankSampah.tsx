@@ -28,7 +28,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-import ButtonAddData from '../components/modal-add-data';
+import ButtonAddData from '../components/dialog-add';
 import ButtonDelete from '../../../common/components/dialog-delete';
 
 const dataBankSampah = [
