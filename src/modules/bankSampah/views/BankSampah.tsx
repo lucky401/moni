@@ -22,7 +22,6 @@ import {
 } from '@chakra-ui/react';
 
 import {
-    DeleteIcon,
     EditIcon,
     SearchIcon,
     ChevronLeftIcon,
@@ -30,6 +29,27 @@ import {
 } from '@chakra-ui/icons';
 
 import ButtonAddData from '../components/modal-add-data';
+import ButtonDelete from '../../../common/components/dialog-delete';
+
+const dataBankSampah = [
+    {
+        id: "1",
+        nama: "Melania",
+        alamat: "Jl. Mangga Dua ",
+        kecamatan: "Mangga Dua Selatan",
+        kelurahan: "Sawah Besar",
+        status: 0
+    },
+    {
+        id: "2",
+        nama: "Melania",
+        alamat: "Jl. Mangga Dua ",
+        kecamatan: "Mangga Dua Selatan",
+        kelurahan: "Sawah Besar",
+        status: 1
+    },
+
+];
 
 function BankSampah(): JSX.Element {
     return (
@@ -65,58 +85,36 @@ function BankSampah(): JSX.Element {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>Ani Sugigi</Td>
-                                <Td>Jln. Mengkudu</Td>
-                                <Td>Cibinong</Td>
-                                <Td>Koneng</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map(size => (
-                                            <Tag
-                                                size={size}
-                                                key={size}
-                                                variant="solid"
-                                                colorScheme="teal"
-                                            >
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>Caca Merica</Td>
-                                <Td>Jln. Salak</Td>
-                                <Td>Sabang</Td>
-                                <Td>Demak</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map(size => (
-                                            <Tag
-                                                size={size}
-                                                key={size}
-                                                variant="solid"
-                                                colorScheme="gray"
-                                            >
-                                                Tidak Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
+                            {dataBankSampah.map((item) => (
+                                <Tr>
+                                    <Td>{item.nama}</Td>
+                                    <Td>{item.alamat}</Td>
+                                    <Td>{item.kecamatan}</Td>
+                                    <Td>{item.kelurahan}</Td>
+                                    <Td>
+                                        <HStack spacing={4}>
+                                            {
+                                                item.status === 1 ?
+                                                    <Tag variant='solid' colorScheme='teal'>
+                                                        Aktif
+                                                    </Tag>
+
+                                                    :
+                                                    <Tag variant='solid' colorScheme='gray'>
+                                                        Tidak Aktif
+                                                    </Tag>
+                                            }
+                                        </HStack>
+                                    </Td>
+                                    <Td>
+                                        <HStack>
+                                            <EditIcon />
+                                            <ButtonDelete />
+                                        </HStack>
+                                    </Td>
+                                </Tr>
+                            ))}
+
                         </Tbody>
                     </Table>
                 </TableContainer>

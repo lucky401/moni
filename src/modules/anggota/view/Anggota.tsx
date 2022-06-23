@@ -19,8 +19,8 @@ import {
     Stack,
     IconButton, Flex, Spacer
 } from '@chakra-ui/react';
-import ButtonAddData from '../components/modal-add-data';
-import ButtonDelete from '../components/modal-delete';
+import ButtonAddData from '../components/dialog-add';
+import ButtonDelete from '../../../common/components/dialog-delete';
 import ButtonUpdate from '../components/dialog-update';
 
 const dataAnggota = [
