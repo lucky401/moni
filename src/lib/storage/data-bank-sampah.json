@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "nama": "Bank Sampah Pertama",
+    "lokasi": {
+      "alamat": "Jl. Jeruk Raya No.17",
+      "kelurahan": "Semarang Sel",
+      "kecamatan": "Lamper Lor"
+    },
+    "koordinat": {
+      "lat": "-7.005082405828691",
+      "lng": "110.4384861570951"
+    },
+    "isActive": false
+  },
+  {
+    "id": "2",
+    "nama": "Bank Sampah Kedua",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "koordinat": {
+      "lat": "-7.005888897362026",
+      "lng": "110.43662658024917"
+    },
+    "isActive": true
+  }
+]

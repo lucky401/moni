@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "nama": "Melania",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "081284302290",
+    "koordinat": {
+      "lat": "-7.003219024542244",
+      "lng": "110.43278085978217"
+    },
+    "isActive": true
+  },
+  {
+    "id": "2",
+    "nama": "Tazrian",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "08121212121",
+    "koordinat": {
+      "lat": "-7.002143495385091",
+      "lng": "110.44430362892614"
+    },
+    "isActive": true
+  },
+  {
+    "id": "3",
+    "nama": "Salwa",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "08121212121",
+    "koordinat": {
+      "lat": "-7.002473608558483",
+      "lng": "110.43858515969546"
+    },
+    "isActive": true
+  },
+  {
+    "id": "4",
+    "nama": "Lucky",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "08121212121",
+    "koordinat": {
+      "lat": "-6.9992576572671705",
+      "lng": "110.42801725636659"
+    },
+    "isActive": true
+  },
+  {
+    "id": "5",
+    "nama": "Gilly",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "08121212121",
+    "koordinat": {
+      "lat": "-7.010087444396155",
+      "lng": "110.4309569575236"
+    },
+    "isActive": true
+  },
+  {
+    "id": "6",
+    "nama": "Susan",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "phone": "08121212121",
+    "koordinat": {
+      "lat": "-7.009863823020712",
+      "lng": "110.4387890073142"
+    },
+    "isActive": false
+  }
+]
