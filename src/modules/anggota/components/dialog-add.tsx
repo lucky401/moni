@@ -11,11 +11,11 @@ import {
     FormControl,
     Input,
     FormLabel,
-    Select,
+    Switch,
 } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 
-function ModalTambahData(): JSX.Element {
+function DialogAdd(): JSX.Element {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
@@ -37,36 +37,29 @@ function ModalTambahData(): JSX.Element {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Tambah Anggota</ModalHeader>
+                    <ModalHeader>Tambah Data</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <FormControl isRequired>
-                            <FormLabel>ID Anggota</FormLabel>
-                            <Input placeholder="Nomor ID Anggota" />
+                            <FormLabel htmlFor="nama">Nama Anggota</FormLabel>
+                            <Input id="nama" placeholder="Nama Anggota" />
                         </FormControl>
                         <FormControl isRequired mt={4}>
-                            <FormLabel>Nama Anggota</FormLabel>
-                            <Input placeholder="Nama Anggota" />
+                            <FormLabel htmlFor="alamat">Alamat</FormLabel>
+                            <Input id="alamat" placeholder="Alamat" />
                         </FormControl>
                         <FormControl isRequired mt={4}>
-                            <FormLabel>Alamat</FormLabel>
-                            <Input placeholder="Alamat" />
+                            <FormLabel htmlFor="phone">Telepon</FormLabel>
+                            <Input id="phone" placeholder="Telepon" />
                         </FormControl>
-                        <FormControl isRequired mt={4}>
-                            <FormLabel>Telepon</FormLabel>
-                            <Input placeholder="Telepon" />
-                        </FormControl>
-                        <FormControl isRequired mt={4}>
-                            <FormLabel htmlFor="country">Status</FormLabel>
-                            <Select id="country" placeholder="Select status">
-                                <option>Aktif</option>
-                                <option>Tidak Aktif</option>
-                            </Select>
+                        <FormControl mt={4}>
+                            <FormLabel htmlFor="status">Status Aktif ?</FormLabel>
+                            <Switch id="status" />
                         </FormControl>
                     </ModalBody>
                     <ModalFooter>
                         <Button colorScheme="teal" onClick={onClose}>
-                            Submit
+                            Simpan
                         </Button>
                     </ModalFooter>
                 </ModalContent>
@@ -75,4 +68,4 @@ function ModalTambahData(): JSX.Element {
     );
 }
 
-export default ModalTambahData;
+export default DialogAdd;

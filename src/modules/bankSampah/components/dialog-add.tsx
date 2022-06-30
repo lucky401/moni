@@ -11,7 +11,7 @@ import {
     FormControl,
     Input,
     FormLabel,
-    Select,
+    Switch,
 } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 
@@ -41,27 +41,24 @@ function ModalTambahData(): JSX.Element {
                     <ModalCloseButton />
                     <ModalBody>
                         <FormControl isRequired>
-                            <FormLabel>Nama Bank Sampah</FormLabel>
-                            <Input placeholder="Nama Bank Sampah" />
+                            <FormLabel htmlFor="nama">Nama Bank Sampah</FormLabel>
+                            <Input id="nama" placeholder="Nama Bank Sampah" />
                         </FormControl>
                         <FormControl isRequired mt={4}>
-                            <FormLabel>Alamat</FormLabel>
-                            <Input placeholder="Alamat" />
+                            <FormLabel htmlFor="alamat">Alamat</FormLabel>
+                            <Input id="alamat" placeholder="Alamat" />
                         </FormControl>
                         <FormControl isRequired mt={4}>
-                            <FormLabel>Kecamatan</FormLabel>
-                            <Input placeholder="Kecamatan" />
+                            <FormLabel htmlFor="kelurahan">Kelurahan</FormLabel>
+                            <Input id="kelurahan" placeholder="Kelurahan" />
                         </FormControl>
                         <FormControl isRequired mt={4}>
-                            <FormLabel>Kelurahan</FormLabel>
-                            <Input placeholder="Kelurahan" />
+                            <FormLabel htmlFor="kecamatan">Kecamatan</FormLabel>
+                            <Input id="kecamatan" placeholder="Kecamatan" />
                         </FormControl>
-                        <FormControl isRequired mt={4}>
-                            <FormLabel htmlFor="country">Status</FormLabel>
-                            <Select id="country" placeholder="Select status">
-                                <option>Aktif</option>
-                                <option>Tidak Aktif</option>
-                            </Select>
+                        <FormControl mt={4}>
+                            <FormLabel htmlFor="status">Status Aktif ?</FormLabel>
+                            <Switch id="status" />
                         </FormControl>
                     </ModalBody>
                     <ModalFooter>

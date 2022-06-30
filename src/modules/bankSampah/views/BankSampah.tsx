@@ -21,15 +21,11 @@ import {
     Spacer,
 } from '@chakra-ui/react';
 
-import {
-    DeleteIcon,
-    EditIcon,
-    SearchIcon,
-    ChevronLeftIcon,
-    ChevronRightIcon,
-} from '@chakra-ui/icons';
-
-import ButtonAddData from '../components/modal-add-data';
+import { SearchIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import dataBankSampah from '../../../lib/storage/data-bank-sampah.json';
+import ButtonDelete from '../../../common/components/dialog-delete';
+import ButtonAddData from '../components/dialog-add';
+import ButtonUpdate from '../components/dialog-update';
 
 function BankSampah(): JSX.Element {
     return (
@@ -56,76 +52,54 @@ function BankSampah(): JSX.Element {
                     <Table variant="striped">
                         <Thead>
                             <Tr>
+                                <Th>ID</Th>
                                 <Th>Nama Bank Sampah</Th>
                                 <Th>Alamat</Th>
-                                <Th>Kecamatan</Th>
                                 <Th>Kelurahan</Th>
+                                <Th>Kecamatan</Th>
                                 <Th>Status</Th>
                                 <Th>Aksi</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>Ani Sugigi</Td>
-                                <Td>Jln. Mengkudu</Td>
-                                <Td>Cibinong</Td>
-                                <Td>Koneng</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map(size => (
-                                            <Tag
-                                                size={size}
-                                                key={size}
-                                                variant="solid"
-                                                colorScheme="teal"
-                                            >
-                                                Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
-                            <Tr>
-                                <Td>Caca Merica</Td>
-                                <Td>Jln. Salak</Td>
-                                <Td>Sabang</Td>
-                                <Td>Demak</Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        {['sm'].map(size => (
-                                            <Tag
-                                                size={size}
-                                                key={size}
-                                                variant="solid"
-                                                colorScheme="gray"
-                                            >
-                                                Tidak Aktif
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                </Td>
-                                <Td>
-                                    <HStack spacing={4}>
-                                        <EditIcon />
-                                        <DeleteIcon color="red.500" />
-                                    </HStack>
-                                </Td>
-                            </Tr>
+                            {dataBankSampah.map(item => (
+                                <Tr key={item.id}>
+                                    <Td>{item.id}</Td>
+                                    <Td>{item.nama}</Td>
+                                    <Td>{item.lokasi.alamat}</Td>
+                                    <Td>{item.lokasi.kelurahan}</Td>
+                                    <Td>{item.lokasi.kecamatan}</Td>
+                                    <Td>
+                                        <HStack spacing={4}>
+                                            {item.isActive ? (
+                                                <Tag variant="solid" colorScheme="teal">
+                                                    Aktif
+                                                </Tag>
+                                            ) : (
+                                                <Tag variant="solid" colorScheme="gray">
+                                                    Tidak Aktif
+                                                </Tag>
+                                            )}
+                                        </HStack>
+                                    </Td>
+                                    <Td>
+                                        <HStack>
+                                            <ButtonUpdate
+                                                nama={item.nama}
+                                                alamat={item.lokasi.alamat}
+                                                kelurahan={item.lokasi.kelurahan}
+                                                kecamatan={item.lokasi.kecamatan}
+                                                isActive={item.isActive}
+                                            />
+                                            <ButtonDelete />
+                                        </HStack>
+                                    </Td>
+                                </Tr>
+                            ))}
                         </Tbody>
                     </Table>
                 </TableContainer>
-                <Stack
-                    direction="row"
-                    spacing={4}
-                    align="center"
-                    justifyContent="center"
-                >
+                <Stack direction="row" spacing={4}>
                     <IconButton aria-label="#" icon={<ChevronLeftIcon />} isDisabled />
                     <Button colorScheme="teal" variant="solid">
                         1
