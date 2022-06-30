@@ -7,7 +7,7 @@
       "kelurahan": "Peterongan",
       "kecamatan": "Semarang Selatan"
     },
-    "phone": "081284302290",
+    "phone": "08157561xxxx",
     "koordinat": {
       "lat": "-7.003219024542244",
       "lng": "110.43278085978217"
@@ -18,14 +18,14 @@
     "id": "2",
     "nama": "Tazrian",
     "lokasi": {
-      "alamat": "Jl. Lamper Sari No.41",
-      "kelurahan": "Peterongan",
-      "kecamatan": "Semarang Selatan"
+      "alamat": "Jl. Guntur 31-7",
+      "kelurahan": "Gajahmungkur",
+      "kecamatan": "Gajahmungkur"
     },
-    "phone": "08121212121",
+    "phone": "08225765xxxx",
     "koordinat": {
-      "lat": "-7.002143495385091",
-      "lng": "110.44430362892614"
+      "lat": "-7.00617489627636",
+      "lng": "110.41195549014796"
     },
     "isActive": true
   },
@@ -33,14 +33,14 @@
     "id": "3",
     "nama": "Salwa",
     "lokasi": {
-      "alamat": "Jl. Lamper Sari No.41",
-      "kelurahan": "Peterongan",
-      "kecamatan": "Semarang Selatan"
+      "alamat": "Jl. Harmoni",
+      "kelurahan": "Pundakpayung",
+      "kecamatan": "Banyumanik"
     },
-    "phone": "08121212121",
+    "phone": "08167097xxxx",
     "koordinat": {
-      "lat": "-7.002473608558483",
-      "lng": "110.43858515969546"
+      "lat": "-7.086917063797628",
+      "lng": "110.41126815172986"
     },
     "isActive": true
   },
@@ -48,14 +48,14 @@
     "id": "4",
     "nama": "Lucky",
     "lokasi": {
-      "alamat": "Jl. Lamper Sari No.41",
-      "kelurahan": "Peterongan",
-      "kecamatan": "Semarang Selatan"
+      "alamat": "Jl. Taman Setiabudi",
+      "kelurahan": "Pedalangan",
+      "kecamatan": "Banyumanik"
     },
-    "phone": "08121212121",
+    "phone": "08556052xxxx",
     "koordinat": {
-      "lat": "-6.9992576572671705",
-      "lng": "110.42801725636659"
+      "lat": "-7.066892712986718",
+      "lng": "110.42302157132758"
     },
     "isActive": true
   },
@@ -63,30 +63,90 @@
     "id": "5",
     "nama": "Gilly",
     "lokasi": {
-      "alamat": "Jl. Lamper Sari No.41",
-      "kelurahan": "Peterongan",
-      "kecamatan": "Semarang Selatan"
+      "alamat": "Jl. Sapta Prasetya Barat I",
+      "kelurahan": "Pedurungan Kidul",
+      "kecamatan": "Pedurungan"
     },
-    "phone": "08121212121",
+    "phone": "08912367xxxx",
     "koordinat": {
-      "lat": "-7.010087444396155",
-      "lng": "110.4309569575236"
+      "lat": "-7.015380065982398",
+      "lng": "110.47402154928986"
     },
     "isActive": true
   },
   {
     "id": "6",
-    "nama": "Susan",
+    "nama": "Dewa",
     "lokasi": {
-      "alamat": "Jl. Lamper Sari No.41",
-      "kelurahan": "Peterongan",
-      "kecamatan": "Semarang Selatan"
+      "alamat": "Jl. Jangli Gebeng ",
+      "kelurahan": "Jangli",
+      "kecamatan": "Tembalang"
     },
-    "phone": "08121212121",
+    "phone": "08964598xxxx",
     "koordinat": {
-      "lat": "-7.009863823020712",
-      "lng": "110.4387890073142"
+      "lat": "-7.0277577060453735",
+      "lng": "110.43325219051792"
     },
     "isActive": false
+  },
+  {
+    "id": "7",
+    "nama": "Huga",
+    "lokasi": {
+      "alamat": "Jl. Tumpang X 12-13 ",
+      "kelurahan": "Gajahmungkur",
+      "kecamatan": "Gajahmungkur"
+    },
+    "phone": "08964598xxxx",
+    "koordinat": {
+      "lat": "-7.006929301854095",
+      "lng": "110.40321145080519"
+    },
+    "isActive": false
+  },
+  {
+    "id": "8",
+    "nama": "Husna",
+    "lokasi": {
+      "alamat": "Jl. Krakatau VII 21-1 ",
+      "kelurahan": "Karangtempel",
+      "kecamatan": "Semarang Timur"
+    },
+    "phone": "0816785xxxx",
+    "koordinat": {
+      "lat": "-6.988928253487978",
+      "lng": "110.43738152209028"
+    },
+    "isActive": true
+  },
+  {
+    "id": "9",
+    "nama": "Satria",
+    "lokasi": {
+      "alamat": "Gg. Iklas",
+      "kelurahan": "Tj. Mas",
+      "kecamatan": "Semarang Utara"
+    },
+    "phone": "08564255xxxx",
+    "koordinat": {
+      "lat": "-6.962081491834535",
+      "lng": "110.42743956256153"
+    },
+    "isActive": false
+  },
+  {
+    "id": "10",
+    "nama": "Chanyeol",
+    "lokasi": {
+      "alamat": "Jl. Sigawe 27-21",
+      "kelurahan": "Tembalang",
+      "kecamatan": "Tembalang"
+    },
+    "phone": "08564255xxxx",
+    "koordinat": {
+      "lat": "-7.0572170570604555",
+      "lng": "110.44019131681551"
+    },
+    "isActive": true
   }
 ]
