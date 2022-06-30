@@ -26,5 +26,19 @@
       "lng": "110.43662658024917"
     },
     "isActive": true
+  },
+  {
+    "id": "3",
+    "nama": "Bank Sampah Kedua",
+    "lokasi": {
+      "alamat": "Jl. Lamper Sari No.41",
+      "kelurahan": "Peterongan",
+      "kecamatan": "Semarang Selatan"
+    },
+    "koordinat": {
+      "lat": "-7.004950615355938",
+      "lng": "110.42044882741612"
+    },
+    "isActive": true
   }
 ]
