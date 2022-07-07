@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "nama": "Bank Sampah Pertama",
+    "nama": "Bank Sampah Jeruk Raya",
     "lokasi": {
       "alamat": "Jl. Jeruk Raya No.17",
       "kelurahan": "Semarang Sel",
@@ -15,7 +15,7 @@
   },
   {
     "id": "2",
-    "nama": "Bank Sampah Kedua",
+    "nama": "Bank Sampah Peterongan",
     "lokasi": {
       "alamat": "Jl. Lamper Sari No.41",
       "kelurahan": "Peterongan",
@@ -29,7 +29,7 @@
   },
   {
     "id": "3",
-    "nama": "Bank Sampah Ketiga",
+    "nama": "Bank Sampah Wilis",
     "lokasi": {
       "alamat": "Jl. Wilis No.5",
       "kelurahan": "Tegalasri",
@@ -43,7 +43,7 @@
   },
   {
     "id": "4",
-    "nama": "Bank Sampah Keempat",
+    "nama": "Bank Sampah Veteran",
     "lokasi": {
       "alamat": "Jl. Veteran No. 1",
       "kelurahan": "Bendungan",
@@ -57,7 +57,7 @@
   },
   {
     "id": "5",
-    "nama": "Bank Sampah Kelima",
+    "nama": "Bank Sampah Senopati",
     "lokasi": {
       "alamat": "Jl. Panembahan Senopati No.274 L",
       "kelurahan": "Ngaliyan",
@@ -71,7 +71,7 @@
   },
   {
     "id": "6",
-    "nama": "Bank Sampah Keenam",
+    "nama": "Bank Sampah Gaharu Raya",
     "lokasi": {
       "alamat": "Jl. Gaharu Raya No. 213-16",
       "kelurahan": "Srondol Wetan",
@@ -85,7 +85,7 @@
   },
   {
     "id": "7",
-    "nama": "Bank Sampah Ketujuh",
+    "nama": "Bank Sampah Genuk",
     "lokasi": {
       "alamat": "Jl. Kenanga I 3",
       "kelurahan": "Genuk",
@@ -99,7 +99,7 @@
   },
   {
     "id": "8",
-    "nama": "Bank Sampah Kedelapan",
+    "nama": "Bank Sampah Undip",
     "lokasi": {
       "alamat": "Jl. Prof. Sudarto",
       "kelurahan": "Bulusan",
@@ -113,7 +113,7 @@
   },
   {
     "id": "9",
-    "nama": "Bank Sampah Kesembilan",
+    "nama": "Bank Sampah Ngesrep",
     "lokasi": {
       "alamat": "Jl. Bukit Lawu 18-20",
       "kelurahan": "Ngesrep",
@@ -127,7 +127,7 @@
   },
   {
     "id": "10",
-    "nama": "Bank Sampah Kesepuluh",
+    "nama": "Bank Sampah Kedungmundu",
     "lokasi": {
       "alamat": "Jl. Sinar Bakti I ",
       "kelurahan": "Kedungmundu",
