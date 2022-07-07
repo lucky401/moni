@@ -1,10 +1,14 @@
 import { Suspense, lazy, useEffect } from 'react';
+import shallow from 'zustand/shallow';
 import {
   useLocation,
   useNavigate,
   Routes,
   Route,
 } from 'react-router-dom';
+
+import {useAuth} from 'lib/auth-provider/context';
+import {useProfile} from 'lib/auth-provider/context/hooks';
 
 import { FullPageSpinner } from 'common/components';
 
@@ -19,11 +23,23 @@ const FullPageError = lazy(() => import('common/components/full-page-error'));
 function App(): JSX.Element {
   const location = useLocation();
   const navigate = useNavigate();
+  const [getAuth] = useAuth(state => [state.getAuth], shallow);
+
+  const {refetch: getProfile} = useProfile();
+
   useEffect(() => {
     if (location.pathname === '/') {
       navigate('/menu');
     }
   }, [location, navigate]);
+
+
+  useEffect(() => {
+    const currentUser = getAuth();
+    if (currentUser.token) {
+      getProfile();
+    }
+  }, [getAuth, getProfile]);
 
   return (
     <Suspense fallback={<FullPageSpinner />}>

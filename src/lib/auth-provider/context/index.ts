@@ -18,7 +18,8 @@ interface AuthState {
 
 interface AuthActions {
   getAuth: () => AuthState;
-  setAuth: (payload: {data: User; token: string}) => void;
+  setAuth: (payload: { data: User; token: string }) => void;
+  setUser: (payload: User) => void;
   clearSession: () => void;
 }
 
@@ -77,6 +78,15 @@ const actions = (
       user: {...payload.data},
       token,
       isAuth: true,
+    }));
+  },
+
+  setUser: (payload: any) => {
+    setUserPersistance(payload);
+
+    set(state => ({
+      ...state,
+      user: {...payload},
     }));
   },
 

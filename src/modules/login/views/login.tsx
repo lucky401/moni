@@ -1,15 +1,23 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
   Box,
   Button,
   Flex,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Input,
   Text,
 } from '@chakra-ui/react';
 
+import {Formik, Form, Field} from 'formik';
+
+import {TextField} from 'lib/components/text-field';
+
+import {useLogin} from 'lib/auth-provider/context/hooks';
+import {INITIAL_VALUES, LoginSchema} from 'lib/auth-provider/constants';
+
 function Login(): JSX.Element {
+  const [login, status, errorMessage, fieldErrors] = useLogin();
+
   return (
     <Flex minHeight="100vh">
       <Box w="100%" minHeight="100%">
@@ -23,30 +31,86 @@ function Login(): JSX.Element {
                 to access the dashboard
               </Text>
             </Box>
-            <form>
-              <FormControl my={4} isInvalid={false}>
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <Input id="email" type="email" placeholder="Email" />
-                <FormErrorMessage>Email must be filled</FormErrorMessage>
-              </FormControl>
-              <FormControl my={4} isInvalid={false}>
-                <FormLabel htmlFor="email">Password</FormLabel>
-                <Input id="password" type="password" placeholder="Password" />
-                <FormErrorMessage>
-                  The password does not match any account. Please try again.
-                </FormErrorMessage>
-              </FormControl>
-              <Button
-                variant="solid"
-                size="md"
-                colorScheme="blue"
-                color="white"
-                width="100%"
-                shadow="lg"
-              >
-                Login
-              </Button>
-            </form>
+            <Formik
+              initialValues={INITIAL_VALUES}
+              validationSchema={LoginSchema}
+              onSubmit={values => {
+                login(values);
+              }}
+            >
+              {() => (
+                <Form>
+                  <Field name="email">
+                    {({
+                      field,
+                      form,
+                    }: {
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      field: any;
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      form: any;
+                    }) => (
+                      <TextField
+                        id="email"
+                        label="Email"
+                        placeholder="Email"
+                        type="email"
+                        errorMessage={
+                          form.touched.email &&
+                          (form.errors.email || fieldErrors?.email)
+                        }
+                        inputProps={{...field}}
+                        disabled={status === 'fetching'}
+                        my={4}
+                      />
+                    )}
+                  </Field>
+                  <Field name="password">
+                    {({
+                      field,
+                      form,
+                    }: {
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      field: any;
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      form: any;
+                    }) => (
+                      <TextField
+                        id="password"
+                        label="Password"
+                        placeholder="Password"
+                        type="password"
+                        errorMessage={
+                          form.touched.password &&
+                          (form.errors.password || fieldErrors?.password)
+                        }
+                        inputProps={{...field}}
+                        disabled={status === 'fetching'}
+                        my={4}
+                      />
+                    )}
+                  </Field>
+                  {errorMessage && status === 'rejected' && (
+                    <Alert status="error" my={2}>
+                      <AlertIcon />
+                      <AlertDescription>{errorMessage}</AlertDescription>
+                    </Alert>
+                  )}
+                  <Button
+                    size="md"
+                    variant="solid"
+                    colorScheme="blue"
+                    color="white"
+                    width="100%"
+                    type="submit"
+                    shadow="lg"
+                    isLoading={status === 'fetching'}
+                  >
+                    Login
+                  </Button>
+                </Form>
+              )}
+            </Formik>
           </Box>
         </Flex>
       </Box>
