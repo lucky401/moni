@@ -17,28 +17,28 @@ const dataMenu = [
   {
     id: "1",
     title: "Peta",
-    description: "This is a summary, can be any description",
+    description: "Peta persebaran bank sampah dan petugas kebersihan",
     icon: FiMap,
     href: "/maps"
   },
   {
     id: "2",
     title: "Dashboard",
-    description: "This is a summary, can be any description",
+    description: "Visualisasi data terkait pengolahan sampah",
     icon: RiDashboardLine,
     href: "/dashboard"
   },
   {
     id: "3",
-    title: "Anggota",
-    description: "This is a summary, can be any description",
+    title: "Anggota Petugas Kebersihan",
+    description: "Data anggota kebersihan yang terdaftar",
     icon: RiGroupLine,
     href: "/anggota"
   },
   {
     id: "4",
     title: "Bank Sampah",
-    description: "This is a summary, can be any description",
+    description: "Data bank sampah yang dikelola",
     icon: RiBankLine,
     href: "/bank-sampah"
   },
