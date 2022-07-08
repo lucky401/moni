@@ -11,18 +11,18 @@ function Maps(): JSX.Element {
             lat: -7.0059124,
             lng: 110.4387237,
         },
-        zoom: 15,
+        zoom: 14,
     };
 
     return (
-        <Box w="100%" h="100vh">
+        <Box w="100%" h="calc(100vh - 64px)">
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyANrSZmh9Dzui1tXkC9H6R72Jv_03JxGcE' }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
                 options={{
                     fullscreenControl: false,
-                    minZoom: 15,
+                    minZoom: 13,
                     maxZoom: 18,
                 }}
                 yesIWantToUseGoogleMapApiInternals

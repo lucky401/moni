@@ -50,11 +50,11 @@ function Marker({
                             Status :{' '}
                             {isActive === true ? (
                                 <Tag size="sm" variant="solid" colorScheme="teal">
-                                    Aktif
+                                    Buka
                                 </Tag>
                             ) : (
                                 <Tag size="sm" variant="solid" colorScheme="gray">
-                                    Tidak Aktif
+                                    Tutup
                                 </Tag>
                             )}{' '}
                         </Text>
