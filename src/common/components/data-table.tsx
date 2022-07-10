@@ -28,8 +28,8 @@ function DataTable({
 
   return (
     <Box {...props}>
-      {!isLoaded && <TableSkeleton />}
-      {isLoaded && (
+      {isLoaded && <TableSkeleton />}
+      {!isLoaded && (
         <TableContainer>
           <Table variant="simple" {...getTableProps()}>
             <Thead>

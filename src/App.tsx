@@ -14,7 +14,7 @@ import { FullPageSpinner } from 'common/components';
 
 const LoginModule = lazy(() => import('./modules/login'));
 const MenuModule = lazy(() => import('./modules/menu'));
-const AnggotaModule = lazy(() => import('./modules/anggota'));
+const MemberModule = lazy(() => import('./modules/member'));
 const BankSampahModule = lazy(() => import('./modules/bankSampah'));
 const MapModule = lazy(() => import('./modules/maps'));
 const DashboardModule = lazy(() => import('./modules/dashboard'));
@@ -46,7 +46,7 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/login/*" element={<LoginModule />} />
         <Route path="/menu/*" element={<MenuModule />} />
-        <Route path="/anggota/*" element={<AnggotaModule />} />
+        <Route path="/anggota/*" element={<MemberModule />} />
         <Route path="/bank-sampah/*" element={<BankSampahModule />} />
         <Route path="/maps/*" element={<MapModule />} />
         <Route path="/dashboard/*" element={<DashboardModule />} />
