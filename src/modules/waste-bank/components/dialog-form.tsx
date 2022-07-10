@@ -12,36 +12,36 @@ import {
 
 import {Formik, Form, Field} from 'formik';
 
-import {TextField, TextAreaField, SwitchField} from 'lib/components';
+import {TextField, TextAreaField, SwitchField, Select} from 'lib/components';
 
 import {
-  INITIAL_VALUES_CREATE_MEMBER,
-  CreateMemberSchema,
+  INITIAL_VALUES_CREATE_UNIT,
+  CreateUnitSchema,
 } from '../constants';
 
 function DialogForm({
   isOpen,
   onClose,
-  selectedMember,
+  selectedUnit,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  selectedMember: any;
+  selectedUnit: any;
 }): JSX.Element {
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
-          {selectedMember ? 'Perbarui' : 'Tambah'} Anggota
+          {selectedUnit ? 'Perbarui' : 'Tambah'} Unit
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody px={6} py={7}>
           <Formik
-            initialValues={selectedMember || INITIAL_VALUES_CREATE_MEMBER}
-            validationSchema={CreateMemberSchema}
+            initialValues={selectedUnit || INITIAL_VALUES_CREATE_UNIT}
+            validationSchema={CreateUnitSchema}
             onSubmit={values => {
-              if (selectedMember) {
+              if (selectedUnit) {
                 onClose()
               } else {
                 onClose()
@@ -74,7 +74,7 @@ function DialogForm({
                       />
                     )}
                   </Field>
-                  <Field name="phone">
+                  <Field name="village">
                     {({
                       field,
                       form,
@@ -84,16 +84,51 @@ function DialogForm({
                       // eslint-disable-next-line react/no-unused-prop-types
                       form: any;
                     }) => (
-                      <TextField
-                        id="phone"
-                        label="Nomor Telepon"
-                        placeholder="085677122121"
-                        type="number"
+                      <Select
+                        id="name"
+                        label="Kelurahan"
+                        placeholder="Kraton"
                         errorMessage={
-                          form.touched.phone &&
-                          form.errors.phone
+                          form.touched.village &&
+                          form.errors.village
                         }
-                        inputProps={{...field}}
+                        inputProps={{ ...field }}
+                        itemText="name"
+                        itemValue="id"
+                        options={[
+                          { id: 1, name: 'Kraton' },
+                          { id: 2, name: 'Patehan' },
+                          { id: 3, name: 'Panembahan' },
+                        ]}
+                      />
+                    )}
+                  </Field>
+                  <Field name="subdistrict">
+                    {({
+                      field,
+                      form,
+                    }: {
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      field: any;
+                      // eslint-disable-next-line react/no-unused-prop-types
+                      form: any;
+                    }) => (
+                      <Select
+                        id="name"
+                        label="Kecamatan"
+                        placeholder="Gajahmungkur"
+                        errorMessage={
+                          form.touched.subdistrict &&
+                          form.errors.subdistrict
+                        }
+                        inputProps={{ ...field }}
+                        itemText="name"
+                        itemValue="id"
+                        options={[
+                          { id: 1, name: 'Gajahmungkur' },
+                          { id: 2, name: 'Semarang Selatan' },
+                          { id: 3, name: 'Banyumanik' },
+                        ]}
                       />
                     )}
                   </Field>
@@ -154,7 +189,7 @@ function DialogForm({
                     type="submit"
                     width="110px"
                   >
-                    {selectedMember ? 'Simpan' : 'Tambah anggota'}
+                    {selectedUnit ? 'Simpan' : 'Tambah Unit'}
                   </Button>
                 </Flex>
               </Form>

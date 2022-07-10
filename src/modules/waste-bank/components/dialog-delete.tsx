@@ -12,11 +12,11 @@ import {
 function DialogDelete({
   isOpen,
   onClose,
-  selectedMember,
+  selectedUnit,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  selectedMember: any;
+  selectedUnit: any;
 }): JSX.Element {
   const onConfirmRemove = (): void => {
     onClose();
@@ -26,10 +26,10 @@ function DialogDelete({
     <Modal size="lg" isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Hapus Anggota</ModalHeader>
+        <ModalHeader>Hapus unit</ModalHeader>
         <ModalCloseButton />
         <ModalBody px={6} py={7}>
-          Apakah Anda yakin untuk menghapus <b>{selectedMember?.name}</b>?
+          Apakah Anda yakin untuk menghapus <b>{selectedUnit?.name}</b>?
         </ModalBody>
         <ModalFooter>
           <Button variant="ghost" mr={3} onClick={onClose}>
