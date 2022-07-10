@@ -29,8 +29,8 @@ const dataMenu = [
   },
   {
     id: '3',
-    title: 'Anggota Petugas Kebersihan',
-    description: 'Data anggota kebersihan yang terdaftar',
+    title: 'Anggota',
+    description: 'Data anggota kebersihan',
     icon: RiGroupLine,
     href: '/anggota',
   },
